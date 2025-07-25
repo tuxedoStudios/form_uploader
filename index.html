@@ -1,0 +1,55 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>The Lukas Stabrauskas Show</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f0f0f0;
+      padding: 20px;
+      max-width: 600px;
+      margin: auto;
+    }
+    h1 {
+      color: #333;
+    }
+    form {
+      display: grid;
+      gap: 12px;
+      background: #fff;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+    input, textarea, button {
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+    }
+    button {
+      background: #333;
+      color: white;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #444;
+    }
+  </style>
+</head>
+<body>
+  <h1>The Lukas Stabrauskas Show</h1>
+  <p>Send in your funny signs or letters!</p>
+
+  <form id="uploadForm" action="/submit" method="POST" enctype="multipart/form-data">
+    <input type="email" name="email" placeholder="Your Email" required />
+    <input type="text" name="fullname" placeholder="First and Last Name" required />
+    <input type="text" name="address" placeholder="Your Address" required />
+    <textarea name="message" placeholder="Your Message" rows="4" required></textarea>
+    <input type="file" name="file" accept="video/*,audio/mpeg,image/*" required />
+    <button type="submit">Send</button>
+  </form>
+</body>
+</html>
